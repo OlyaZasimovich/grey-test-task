@@ -1,0 +1,205 @@
+$maincolor: #293140;
+$black: #000;
+$b_grey: #69707f;
+$blue: #293140;
+$grey: #f7f8fa;
+$border_main: 1px solid #f0f0f0;
+body, html{
+	width: 100%;
+	height: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+body{
+	background: $maincolor;
+	font-family: Arial;
+}
+a{
+	text-decoration: none;
+	color: $black;
+}
+.central {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	width: 1920px;
+}
+.white_block{
+	margin: 0 0 20px 80px;
+	background: #fff;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+    position: relative;
+    overflow: hidden;
+    height: calc(100% - 60px);
+}
+.cr-block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+}
+.top_buttons{
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -ms-flex;
+   display: -o-flex;
+   display: flex;
+   justify-content: flex-end;
+   -ms-align-items: center;
+   align-items: center;
+   height: 40px;
+   &_button_grey{
+	    width: 15px;
+	    height: 15px;
+	    background: $b_grey;
+	    border: 0;
+	    margin-right: 5px;
+	    cursor: pointer;
+	    &:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+
+.blue_right_block{
+	min-width: 4px;
+	background: $blue;
+	height: 100%;
+	width: calc(100% - 1920px);
+}
+.wrapper{
+	height: 100%;
+}
+
+.header, .footer{
+	background: $grey;
+	height: 30px;
+}
+.container{
+    
+    display: flex;
+    height: 100%;
+}
+.left_block {
+	border-right: $border_main;
+}
+.left_menu{
+	width: 240px;
+	height: calc(100% - 60px);
+	flex: 1;
+	&_link_person {
+		display: block;
+	}
+}
+.person{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 15px;
+	-ms-align-items: center;
+	align-items: center;
+	border-bottom: 1px solid #fdfdfd;
+	box-sizing:border-box;
+	.icon{
+		width: 40px;
+		height: 40px;
+		margin: 0 20px;
+		background: #b1b1b1;
+		border-radius: 50px;
+	}
+}
+
+.scroll{
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+}
+.central_block{
+	min-width: 720px;
+	border-right: $border_main;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
+    height: 100%;
+}
+
+.main_central, .main_right{
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    width: 100%;
+}
+.right_block{
+	min-width: 300px;
+	max-width: 600px;
+	width: 100%;
+	flex: 1;
+}
+/* хром, сафари */
+ .scroll::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+.scroll { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.scroll { overflow: -moz-scrollbars-none; }
+
+
+@media screen and (max-width:1520px){
+	.left_block{
+		min-width: 80px;
+		position: relative;
+		.left_menu{
+			width: 80px;
+			.icon{
+				margin: 0;
+				background: #d5d5d5;
+			}
+			.person{
+				border-bottom:$border_main;
+				.name{
+					display: none;
+				}
+			}
+		}
+		&:hover {
+			.left_menu{
+		    	position: absolute;
+		        width: 240px;
+			}
+			.name{
+				display: block;
+			    padding-left: 36px;
+			}
+			.person{
+				border-right:$border_main;
+				background: #fff;
+			}
+		}
+		footer{
+			position: absolute;
+			bottom: 0;
+			width: 80px;
+		} 
+	}
+}

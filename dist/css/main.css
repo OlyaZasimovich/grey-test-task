@@ -1,0 +1,188 @@
+@charset "UTF-8";
+body, html {
+  width: 100%;
+  height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+body {
+  background: #293140;
+  font-family: Arial; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.central {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  width: 1920px; }
+
+.white_block {
+  margin: 0 0 20px 80px;
+  background: #fff;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: calc(100% - 60px); }
+
+.cr-block {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex: 1;
+      flex: 1; }
+
+.top_buttons {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 40px; }
+  .top_buttons_button_grey {
+    width: 15px;
+    height: 15px;
+    background: #69707f;
+    border: 0;
+    margin-right: 5px;
+    cursor: pointer; }
+    .top_buttons_button_grey:last-child {
+      margin-right: 0; }
+
+.blue_right_block {
+  min-width: 4px;
+  background: #293140;
+  height: 100%;
+  width: calc(100% - 1920px); }
+
+.wrapper {
+  height: 100%; }
+
+.header, .footer {
+  background: #f7f8fa;
+  height: 30px; }
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%; }
+
+.left_block {
+  border-right: 1px solid #f0f0f0; }
+
+.left_menu {
+  width: 240px;
+  height: calc(100% - 60px);
+  -ms-flex: 1;
+      flex: 1; }
+  .left_menu_link_person {
+    display: block; }
+
+.person {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border-bottom: 1px solid #fdfdfd;
+  box-sizing: border-box; }
+  .person .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+    background: #b1b1b1;
+    border-radius: 50px; }
+
+.scroll {
+  height: calc(100% - 70px);
+  overflow-y: scroll; }
+
+.central_block {
+  min-width: 720px;
+  border-right: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  width: 100%;
+  -ms-flex: 1;
+      flex: 1;
+  height: 100%; }
+
+.main_central, .main_right {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  width: 100%; }
+
+.right_block {
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+  -ms-flex: 1;
+      flex: 1; }
+
+/* хром, сафари */
+.scroll::-webkit-scrollbar {
+  width: 0; }
+
+/* ie 10+ */
+.scroll {
+  -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.scroll {
+  overflow: -moz-scrollbars-none; }
+
+@media screen and (max-width: 1520px) {
+  .left_block {
+    min-width: 80px;
+    position: relative; }
+    .left_block .left_menu {
+      width: 80px; }
+      .left_block .left_menu .icon {
+        margin: 0;
+        background: #d5d5d5; }
+      .left_block .left_menu .person {
+        border-bottom: 1px solid #f0f0f0; }
+        .left_block .left_menu .person .name {
+          display: none; }
+    .left_block:hover .left_menu {
+      position: absolute;
+      width: 240px; }
+    .left_block:hover .name {
+      display: block;
+      padding-left: 36px; }
+    .left_block:hover .person {
+      border-right: 1px solid #f0f0f0;
+      background: #fff; }
+    .left_block footer {
+      position: absolute;
+      bottom: 0;
+      width: 80px; } }
